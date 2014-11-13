@@ -1,0 +1,22 @@
+---
+- name: Set up iptables rules
+  copy: src=iptables-save dest=/etc/iptables/rules.v4
+  notify: restart iptables
+
+- name: Create web directory
+  file: dest=/srv/www/stevelle.me/html state=directory mode=0655 recurse=true
+
+- name: Install nginx
+  apt: name=nginx state=installed update_cache=true
+  notify: restart nginx
+
+- name: Clear out default site
+  file: path=/etc/nginx/sites-enabled/default state=absent
+  notify: restart nginx
+
+- name: Copy nginx vhost configuration
+  copy: src=stevelle.conf dest=/etc/nginx/conf.d/stevelle.conf
+  notify: restart nginx
+
+- name: Upload default index.html for host
+  copy: src=index.html dest=/srv/www/stevelle.me/html/index.html mode=0644
