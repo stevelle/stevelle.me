@@ -1,0 +1,31 @@
+---
+
+- name: Update site content
+  hosts: all
+  user: root
+  tasks:
+    - name: Ensure backup directory
+      file: 
+        path: /opt/www/backups 
+        state: directory 
+        owner: root 
+        mode: 0700
+    - name: Check current site deploy status
+      find: 
+        paths: /var/www/site
+      register: current_site
+    - name: Backup current site
+      shell: "cd /var/www ;tar -czf /opt/www/backups/site-{{ lookup('pipe', 'date +%Y%m%d-%H%M')  }}.tgz site/*"
+      args:
+        chdir: /var/www/
+      when: 
+        - current_site is defined 
+        - current_site.matched > 0
+    - name: Upload content
+      copy: 
+        src: ../site/output/ 
+        dest: /var/www/site
+        force: yes 
+        mode: 0700
+
+

@@ -1,0 +1,40 @@
+---
+- hosts: all
+  user: root
+  roles:
+    - role: caddy-ansible
+      caddy_config: |
+        stevelle.me, www.stevelle.me, www1.stevelle.me {
+          gzip
+          tls webmaster@stevelle.me
+          root /var/www/site
+          log / stdout "{combined}"
+          header / {
+            # Enable HTTP Strict Transport Security (HSTS) to force clients to always
+            # connect via HTTPS (do not use if only testing)
+            Strict-Transport-Security "max-age=31536000;"
+            # Enable cross-site filter (XSS) and tell browser to block
+            # detected attacks
+            X-XSS-Protection "1; mode=block"
+            # Prevent some browsers from MIME-sniffing a response
+            # away from the declared Content-Type
+            X-Content-Type-Options "nosniff"
+            # Disallow the site to be rendered within a
+            # frame (clickjacking protection)
+            X-Frame-Options "DENY"
+          }
+        }
+  post_tasks:
+    - name: Find private key files
+      find: 
+        paths: /etc/ssl/caddy
+        recurse: yes
+      tags: keys
+      register: key_files
+    - name: Backup private key files
+      fetch:
+        src: "{{ item.path }}"
+        dest: ../ssl_keys
+      with_items: "{{ key_files.files }}"
+      tags: keys
+

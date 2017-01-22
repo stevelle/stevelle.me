@@ -1,6 +1,0 @@
----
-- name: Install Nginx web host with virtual domains and TLS
-  hosts: www
-  remote_user: root
-  roles: 
-    - web
