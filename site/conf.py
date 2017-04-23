@@ -587,7 +587,7 @@ REDIRECTIONS = []
 #     ]
 # }
 DEPLOY_COMMANDS = {'default': [
-    'cd ../playbooks; ansible-playbook -i inventory caddy.yml push-content.yml',
+     "../scripts/deploy_site.sh"
 ]}
 
 # github_deploy configuration

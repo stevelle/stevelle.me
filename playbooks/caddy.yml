@@ -11,6 +11,7 @@
           tls webmaster@stevelle.me
           root /var/www/site
           log / stdout "{combined}"
+          status 404 /.git
           header / {
             # Enable HTTP Strict Transport Security (HSTS) to force clients to always
             # connect via HTTPS (do not use if only testing)
