@@ -691,7 +691,7 @@ GITHUB_COMMIT_SOURCE = True
 
 # If set to True, EXIF data will be copied when an image is thumbnailed or
 # resized. (See also EXIF_WHITELIST)
-# PRESERVE_EXIF_DATA = False
+PRESERVE_EXIF_DATA = False
 
 # If you have enabled PRESERVE_EXIF_DATA, this option lets you choose EXIF
 # fields you want to keep in images. (See also PRESERVE_EXIF_DATA)
@@ -708,7 +708,7 @@ GITHUB_COMMIT_SOURCE = True
 # PRESERVE_EXIF_DATA is set to True
 # To preserve ALL EXIF data, set EXIF_WHITELIST to {"*": "*"}
 
-# EXIF_WHITELIST = {}
+EXIF_WHITELIST = {}
 
 # Some examples of EXIF_WHITELIST settings:
 
