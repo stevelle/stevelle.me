@@ -1,8 +1,16 @@
 #!/bin/bash
+
+function die () {
+  echo $1
+  exit 1
+}
+
 cd output
 git checkout -q deploy
-test `git status --porcelain | wc -l` -gt 0 || echo "No Changes Found" && exit 1
+echo "checked out"
+test `git status --porcelain | wc -l` -gt 0 && echo "Ok. Changes Found" || die "ERROR: No Changes Found"
 git add .
+echo "added"
 git commit -m 'site redeployment'
 git push origin deploy
 cd ../../playbooks
