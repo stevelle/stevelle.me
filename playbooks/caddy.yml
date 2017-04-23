@@ -1,6 +1,8 @@
 ---
 - hosts: all
-  user: root
+  remote_user: ubuntu
+  become: yes
+  become_method: sudo
   roles:
     - role: caddy-ansible
       caddy_config: |
