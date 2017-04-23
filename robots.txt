@@ -1,0 +1,4 @@
+Sitemap: https://stevelle.me/sitemapindex.xml
+
+User-Agent: *
+Host: stevelle.me

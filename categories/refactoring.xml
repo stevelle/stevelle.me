@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Bad at all of this (Posts about refactoring)</title><link>https://stevelle.me/</link><description></description><atom:link href="https://stevelle.me/categories/refactoring.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 04 Feb 2017 04:03:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Write once, Read and rewrite many</title><link>https://stevelle.me/posts/write-once-read-many/</link><dc:creator>Steve Lewis</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
+&lt;p&gt;“Indeed, the ratio of time spent reading versus writing is well over 10 to
+1. We are constantly reading old code as part of the effort to write new
+code. ...[Therefore,] making it easy to read makes it easier to write.”&lt;/p&gt;
+&lt;p class="attribution"&gt;—Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Most of my time in software development is spent reading and thinking about code
+&lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id8" id="id1"&gt;[1]&lt;/a&gt; rather than writing it. This is not a groundbreaking revelation &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id9" id="id2"&gt;[2]&lt;/a&gt; but it
+is particularly true for me.&lt;/p&gt;
+&lt;p&gt;I tend to balance a little more on the side of preferring quality over speed of
+delivery. That means when I write code I will often want to look at it and
+shuffle the logic. The editing process is rewarding for me. I thrive on the
+puzzle, in rearranging the pieces, shaving here and gluing there to make the
+shape serve this purpose or that one better.&lt;/p&gt;
+&lt;p&gt;I got to exercise that recently when I was reviewing a change and find the
+following logic proposed by folks, somewhat in jest: &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id10" id="id3"&gt;[3]&lt;/a&gt; &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id11" id="id4"&gt;[4]&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_9b6c5580261b4fe9abd7deef8c1ce1ae-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says:&lt;/span&gt;
+&lt;a name="rest_code_9b6c5580261b4fe9abd7deef8c1ce1ae-2"&gt;&lt;/a&gt;&lt;span class="c1"&gt;#   if the implementation is hard to explain, it's a bad idea&lt;/span&gt;
+&lt;a name="rest_code_9b6c5580261b4fe9abd7deef8c1ce1ae-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;reduce&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_9b6c5580261b4fe9abd7deef8c1ce1ae-4"&gt;&lt;/a&gt;              &lt;span class="nb"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;hr class="docutils"&gt;
+&lt;p&gt;Myself, I like functional style solutions to problems. But in Python it can take
+a form that looks unlike many others. The lambda syntax is a bit verbose. The
+primitive building blocks to functional style like &lt;tt class="docutils literal"&gt;map&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;filter&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;reduce&lt;/tt&gt; functions are relegated to the corner and the alternatives are
+promoted (moved from builtin space to functools in Python 3). All of this holds
+with the Zen of Python &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id12" id="id5"&gt;[5]&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;map&lt;/tt&gt; usage here is basic. If you can't read that the purpose is to
+generate a list of &lt;tt class="docutils literal"&gt;True&lt;/tt&gt; of &lt;tt class="docutils literal"&gt;False&lt;/tt&gt; values, one for each entry in the
+&lt;tt class="docutils literal"&gt;migrations&lt;/tt&gt; list. It is the equivalent to either of the following:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says:&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-2"&gt;&lt;/a&gt;&lt;span class="c1"&gt;#   if the implementation is easy to explain, it may be a good idea&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;like_map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-4"&gt;&lt;/a&gt;  &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-5"&gt;&lt;/a&gt;  &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-6"&gt;&lt;/a&gt;    &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-7"&gt;&lt;/a&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-9"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says: flat is better than nested&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-10"&gt;&lt;/a&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;hr class="docutils"&gt;
+&lt;p&gt;But what is that &lt;tt class="docutils literal"&gt;reduce&lt;/tt&gt; operation doing? To read that at a first pass it
+helps to have experience working in functional languages in which case you might
+have seen the pattern. Reduce will take N items as input and reduce them to a
+single output, in this case &lt;tt class="docutils literal"&gt;True&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;False&lt;/tt&gt;. This reduce expression
+(&lt;tt class="docutils literal"&gt;x or y&lt;/tt&gt;) then will just &lt;tt class="docutils literal"&gt;or&lt;/tt&gt; the list returned by the &lt;tt class="docutils literal"&gt;map&lt;/tt&gt; operation.
+If any &lt;tt class="docutils literal"&gt;m.has_migrations()&lt;/tt&gt; for &lt;tt class="docutils literal"&gt;m&lt;/tt&gt; in &lt;tt class="docutils literal"&gt;migrations&lt;/tt&gt;, then the final result
+is &lt;tt class="docutils literal"&gt;True&lt;/tt&gt;, otherwise &lt;tt class="docutils literal"&gt;False&lt;/tt&gt;. We could simplify that logic to either of the
+following:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says: readability counts&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-2"&gt;&lt;/a&gt;&lt;span class="n"&gt;pending_migrations&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;pending_migrations&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-4"&gt;&lt;/a&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-5"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says: simple is better than complex&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-6"&gt;&lt;/a&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-7"&gt;&lt;/a&gt;  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-8"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-9"&gt;&lt;/a&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;hr class="docutils"&gt;
+&lt;p&gt;Either of these would be a great solution. They are both explicit, simple, and
+easy to explain.&lt;/p&gt;
+&lt;p&gt;The first is also flat and readable. The list comprehension &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id13" id="id6"&gt;[6]&lt;/a&gt; is the most
+complex yet concise element here, but with a basic familiarity with
+comprehensions it reads very well.&lt;/p&gt;
+&lt;p&gt;The second relies on syntax that anyone who has done a couple weeks of
+programming in nearly any language can decipher (I avoided the use of for-else
+because while it would be technically correct it is an unnecessary use of that
+language feature and more verbose) but it has non-linear flow control and while
+the logic is simple it doesn't convey meaning concisely.&lt;/p&gt;
+&lt;p&gt;We can do better.&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_ac73b917b6ac4215b835e7206334f63b-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says: beautiful is better than ugly&lt;/span&gt;
+&lt;a name="rest_code_ac73b917b6ac4215b835e7206334f63b-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;any&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;hr class="docutils"&gt;
+&lt;p&gt;Now the code reads beautifully. If you forgive the syntax and a bit of the
+dialect of writing software, it expresses an idea simply:&lt;/p&gt;
+&lt;blockquote&gt;
+"Does any x has_migrations for each x in migrations?"&lt;/blockquote&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;blockquote&gt;
+"Does any object in this list have migrations to perform?"&lt;/blockquote&gt;
+&lt;p&gt;When someone comes back to read this, it should take very little time to
+comprehend regardless of their experience level with the language. When we
+strive toward any of these last two sets of solutions and use the concise and
+unambiguous elements of our language we place a lower working memory load &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id14" id="id7"&gt;[7]&lt;/a&gt;
+on ourselves and others. We are not likely to spend less time reading code, in
+the end for a few reasons but if we apply this refinement technique in some
+parts of a project that frees us to focus on the hard parts that really are
+complex.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="docutils footnote" frame="void" id="id8" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://blogs.msdn.microsoft.com/peterhal/2006/01/04/what-do-programmers-really-do-anyway-aka-part-2-of-the-yardstick-saga/"&gt;MSDN Blogs: What do programmers really do anyway?&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id9" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://blogs.msdn.microsoft.com/oldnewthing/20070406-00/?p=27343"&gt;MSDN Blogs: Code is read much more often than it is written, so plan
+accordingly&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id10" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id3"&gt;[3]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://review.openstack.org/#/c/392993/"&gt;OpenStack Change-Id: Ie839e0f240436dce7b151de5b464373516ff5a64&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id11" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id4"&gt;[4]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;This logic is not in a tight loop, and doesn't operate over large data
+sets so the concerns of efficiency, performance, or memory optimization are
+not paramount in this case so I'm not going to mention them.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id12" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id5"&gt;[5]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0020/"&gt;Python PEP 20 -- The Zen of Python&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id13" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id6"&gt;[6]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0202/"&gt;Python PEP 202  -- List Comprehensions&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id14" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id7"&gt;[7]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Working_memory"&gt;Wikipedia: Working Memory&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>process</category><category>refactoring</category><category>style</category><guid>https://stevelle.me/posts/write-once-read-many/</guid><pubDate>Sat, 04 Feb 2017 01:34:12 GMT</pubDate></item></channel></rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Bad at all of this (Posts about disruption)</title><link>https://stevelle.me/</link><description></description><atom:link href="https://stevelle.me/categories/disruption.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 30 Jan 2017 22:56:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Context Switch</title><link>https://stevelle.me/posts/context-switch/</link><dc:creator>Steve Lewis</dc:creator><description>&lt;div&gt;&lt;p&gt;It is a mixed blessing to have multiple folks pinging for my attention at the
+same time. On the one hand it suggests that I am viewed as an asset to the
+community, but on the other it can wreck my basic productivity as I try to keep
+up with the daily work of code reviews and testing, and sometimes even writing
+code.&lt;/p&gt;
+&lt;p&gt;I had a moment this week where I was working with three different people at the
+same time, spanning three different project teams. The conversations lasted from
+approximately five and twenty minutes each with significant overlap. One
+involved spot checking a change, another involved call trace analysis, and the
+third involved a failure without a clear place to begin diagnosing. The context
+switching was a challenge, but I am getting better at that over time. That
+becomes a key bit:&lt;/p&gt;
+&lt;p&gt;Context switching is a skill, and we can improve with practice.&lt;/p&gt;
+&lt;p&gt;I don't know what the greater cost of that practice is however. Obviously, that
+is the enough of a disruption to break any sense of &lt;cite&gt;flow&lt;/cite&gt; but does it take
+longer to get back into the groove after a longer context switching event than
+from a 5 minute context switch? How about adding two new contexts? I'm not sure
+it matters, in my case.&lt;/p&gt;
+&lt;p&gt;The value of getting three other folks overcome their barriers is likely to be
+significantly more valuable than the alternative. This is something that has
+become easier for me to see over time. First, I know I don't work at anything
+like 10x what my peers do. Secondly, the value of having progress on multiple
+fronts at the same time is far more valuable to OpenStack than having one
+fix merged faster.&lt;/p&gt;
+&lt;p&gt;Part of that is due to OpenStack having 2 releases per year, and the operator
+community tending to trail well behing the latest release of OpenStack. It's not
+like this bug fix or feature work is going to actually get widely deployed
+faster simply because it was merged one day earlier. Secondly, OpenStack is huge
+and complex, which means one feature or fix is not likely to have a large
+impact.&lt;/p&gt;
+&lt;p&gt;No, in this context, the greater value is to unblock three other people, who can
+then build their understanding and in turn pass that on to others who follow.
+The superior outcome is to hedge our efforts across many features and bugs and
+those which make the cut for the next release will stand collectively. So I
+accept the interruptions without reservation.&lt;/p&gt;&lt;/div&gt;</description><category>communication</category><category>disruption</category><guid>https://stevelle.me/posts/context-switch/</guid><pubDate>Fri, 27 Jan 2017 02:21:25 GMT</pubDate></item></channel></rss>

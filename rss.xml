@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Bad at all of this</title><link>https://stevelle.me/</link><description>Collected mutterings and rambling emissions</description><atom:link href="https://stevelle.me/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sun, 23 Apr 2017 21:04:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Learning As Performance, part 2</title><link>https://stevelle.me/posts/learning-as-performance-2/</link><dc:creator>Steve Lewis</dc:creator><description>&lt;div&gt;&lt;p&gt;In the first part &lt;a class="footnote-reference" href="https://stevelle.me/posts/learning-as-performance-2/#id2" id="id1"&gt;[1]&lt;/a&gt;, I explored the topic of performance reviews, and I
+proposed that learnings could be a meaningful and constructive review criteria.
+This time I want to explore ways to recognize and keep track of the individual
+learnings so they are available at performance review time.&lt;/p&gt;
+&lt;div class="section" id="record-keeping"&gt;
+&lt;h2&gt;Record Keeping&lt;/h2&gt;
+&lt;p&gt;To give a performance review based on "things learned" it is important to have
+the list of "things". This gets to one of the hardest parts about
+self-assessment for me: keeping a good record of activity. That activity can
+take many forms, not limited to:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;close-up actions like applying a point change for a performance issue
+triggered by learning more about some technical topic&lt;/li&gt;
+&lt;li&gt;inspired decisions like influencing the modeling of a component based on
+learning about the nature of the vendors your customers work with&lt;/li&gt;
+&lt;li&gt;big picture perspectives like from recognizing patterns in bug reports which
+helps to justify important rework to improve product quality and lower
+support costs&lt;/li&gt;
+&lt;li&gt;thematic concerns such as developing excellent insights for code reviews,
+spurred by accumulated experiences about how the product changes over time,
+when leads to coding decisions which make long term maintenance and change
+easier&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Some of these are easier to recognize in the moment and possibly to quantify,
+but at the same time harder to keep track of or value over several months to a
+year later when it comes time for a performance review.&lt;/p&gt;
+&lt;p&gt;Others take a longer view to recognize occuring, and sometimes even longer views
+to fully realize the value from (and quantifying the value can get really sticky
+as well). In those cases it can be helpful to have a good list of things you
+have been doing and to have someone to review them with as a collaborative
+effort to recognize and fully appreciate.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;It is important to articulate two things for each thing brought to a review:&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;The magnitude of the value gained, and the learning that facilitated it. An
+estimate is more valuable than abstract language but hard metrics are best.&lt;/li&gt;
+&lt;li&gt;Where the thinking, the learning, and the lessons were shared. Shared
+learning applies a value multiplier.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;A scenario like the first stands to benefit the whole team if the technical
+learning is shared and the team gains the ability to recognize the cause and to
+apply a solution to similar performance issues. A brown-bag seminar could be a
+great way to share that learning, and the calendar event serves as a record of
+the activity.&lt;/p&gt;
+&lt;p&gt;In the second scenario reflects a decision made in the normal course of doing
+the work. It is possible that commit message or notes in a bug tracker might
+capture some of the insight and reasoning behind it. The insight and the
+resulting model likely needs to be reviewed after some time to see how well it
+has held up to fully recognize the value, and to continue from any flaws
+identified over time. This can form the baseis for another tech talk. Discussion
+of the thinking behind this modeling can form the basis of a public technical
+talk. If the content is secret sauce to the organization than it helps to engage
+in weekly (or regular, on some schedule) internal tech talks. Like before,
+sharing these insights magnifies the value to the organization so a talk here
+can turn a small value into a larger one.&lt;/p&gt;
+&lt;p&gt;The third scenario would typically unfold as a documented effort involving many
+steps, from insight to evaluation of impact and convincing team membes of the
+value and possible metrics development to preparing a pitch to leaders outside
+of the team and possibly delivering that pitch. Then it extends into execution
+and possibly monitoring metrics to evaluate the project's level of success. This
+one typically leaves a long trail of breadcrumbs and is easy to recall later but
+it's worth pointing out that taking the time to incorporate metrics meaningful
+to the business pays big dividends here and this also makes foder for internal
+tech talks, and also for presentations or white papers or blog entries with a
+broader audience. There is significant value to the organization which are
+possible in a story like this one, so following up with these presentations and
+writings to get the most out of it can carry and outsized benefit.&lt;/p&gt;
+&lt;p&gt;The final scenario is the most nebulous to recognize, is hard to measure (the
+metrics can become contaminated by other influences over such a time span), and
+naturally the slow osmosis effect can spread....&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;p&gt;In the next part I will explore .&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="docutils footnote" frame="void" id="id2" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/learning-as-performance-2/#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="https://stevelle.me/posts/learning-as-performance-2/#id3"&gt;&lt;span class="problematic" id="id4"&gt;`Learning As Performance, part 1
+&amp;lt;&amp;gt;`_&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="system-messages section"&gt;
+&lt;h2&gt;Docutils System Messages&lt;/h2&gt;
+&lt;div class="system-message" id="id3"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;tt class="docutils"&gt;&amp;lt;string&amp;gt;&lt;/tt&gt;, line 82); &lt;em&gt;&lt;a href="https://stevelle.me/posts/learning-as-performance-2/#id4"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+Unknown target name: "learning as performance, part 1 &amp;lt;&amp;gt;".&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>performance_management</category><category>thinkings</category><guid>https://stevelle.me/posts/learning-as-performance-2/</guid><pubDate>Sat, 18 Feb 2017 01:09:03 GMT</pubDate></item><item><title>Learning As Performance, part 1</title><link>https://stevelle.me/posts/learning-as-performance-1/</link><dc:creator>Steve Lewis</dc:creator><description>&lt;div&gt;&lt;p&gt;Let's talk about performance reviews &lt;a class="footnote-reference" href="https://stevelle.me/posts/learning-as-performance-1/#id4" id="id1"&gt;[1]&lt;/a&gt;. Consistently, performance reviews
+have been uncomfortable for me. I feel awkward about the standard questions used
+in reviews and in self-assessments and don't want to go through the process
+because there will always be some uncomfortable moments in there which would be
+easier to not revisit. Yet they remain a common feature of almost all
+organizations of any size and they keep happening so if performance is going to
+be reviewed, I would like to make it meaningful. What should "performance" mean
+then, and what does it suggest about my career advancement?&lt;/p&gt;
+&lt;div class="section" id="the-problem-with-performance"&gt;
+&lt;h2&gt;The Problem with Performance&lt;/h2&gt;
+&lt;p&gt;As a coder, my performance could take the form of having done some body of work.
+Let's say I built some features and I fixed some bugs. This is the 'what' of the
+work. Should you gauge my performance by the particular work done? Then we must
+ask more questions: How did the work I completed get selected? Did I choose
+politically sensitive work to garner recognition and did I appear to succeed in
+the work of did the value of the work under perform expectations? All of this
+can be corrupted by independant variables and any measure can be gamed which
+means instead of measuring my performance you are effectively measuring the
+weather.&lt;/p&gt;
+&lt;p&gt;For piece-work jobs this may be "good enough" but for knowledge workers the
+organization's primary metrics might not be what the best criteria to gague
+individual performance. For knowledge workers to keep your organization growing
+and to accelerate that growth to keep ahead of competitors you need their
+productivity to grow over time. The difficult fact is that given the
+increasing cost of maintaining software over time as feature bloat, technical
+debt, and code rot set in often causes a slowing of productivity &lt;a class="footnote-reference" href="https://stevelle.me/posts/learning-as-performance-1/#id5" id="id2"&gt;[2]&lt;/a&gt;. This
+makes it even more dangerous for your knowledge workers to be just treading
+water. Learning is obligatory.&lt;/p&gt;
+&lt;p&gt;Another measure of the value of my work in an organization is in 'how' I did the
+work. I'd like to suggest that how I do the work, specifically what I learned
+from doing the work, is a better indicator of performance and value to the
+organization. This could be a basis for performance review and considering
+recognition for achievements (and if your org does titles maybe this can be
+valuable in marking advancement in titles too &lt;a class="footnote-reference" href="https://stevelle.me/posts/learning-as-performance-1/#id6" id="id3"&gt;[3]&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="learning-as-performance"&gt;
+&lt;h2&gt;Learning as Performance&lt;/h2&gt;
+&lt;p&gt;One of the rewards of working on software is that there are a lot of
+opportunities to solve new problems all the time --variety! A former coworker
+once observed (I paraphrase) that our job is to be struggling, to be challenged.
+As soon as we overcome one challenge, there is another one waiting for us and
+it's time to move on to that.&lt;/p&gt;
+&lt;p&gt;We are going to spend the great majority of our time struggling through that
+next thing. We can mark our professional development in part by our raw
+productivity, but the greater part of our professional growth comes from the
+breakthroughs: the monster bugs fixed or the finesse of implementing a feature.&lt;/p&gt;
+&lt;p&gt;If my daily routine is going to be one continuous learning process, and that
+learning is the function by which I increase my technical capabilities and
+productivity, then this is a fair measure of my increasing value as an employee
+to the organization. If my organization values individual capability and
+productivity increasing, let's think about how we can reflect that in setting
+career paths, marking individual and team achievements, and conducting
+performance reviews.&lt;/p&gt;
+&lt;p&gt;What could be gained by looking at reviews through the lense of learnings?&lt;/p&gt;
+&lt;p&gt;By including, or centering on, learned lessons in performance reviews we can
+discuss all of our work in non-threatening terms; finding insights and lessons
+and discoveries rather than letting the hard times be seen as oversights,
+failures, or mistakes.&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;p&gt;In the next part I will explore ways to recognize and keep track of the
+individual learnings so they are available at performance review time.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="docutils footnote" frame="void" id="id4" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/learning-as-performance-1/#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Performance_appraisal"&gt;Wikipedia, Performance Appraisal&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id5" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/learning-as-performance-1/#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://static1.1.sqspcdn.com/static/f/702523/9243601/1288747638857/200712-Jones.pdf"&gt;"Geriatric Issues of Aging Software" by Casper Jones&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/learning-as-performance-1/#id3"&gt;[3]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://randsinrepose.com/archives/titles-are-toxic/"&gt;Rands in Repose blog: Titles are Toxic:&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>performance_management</category><category>thinkings</category><guid>https://stevelle.me/posts/learning-as-performance-1/</guid><pubDate>Sat, 11 Feb 2017 03:25:51 GMT</pubDate></item><item><title>Write once, Read and rewrite many</title><link>https://stevelle.me/posts/write-once-read-many/</link><dc:creator>Steve Lewis</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
+&lt;p&gt;“Indeed, the ratio of time spent reading versus writing is well over 10 to
+1. We are constantly reading old code as part of the effort to write new
+code. ...[Therefore,] making it easy to read makes it easier to write.”&lt;/p&gt;
+&lt;p class="attribution"&gt;—Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Most of my time in software development is spent reading and thinking about code
+&lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id8" id="id1"&gt;[1]&lt;/a&gt; rather than writing it. This is not a groundbreaking revelation &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id9" id="id2"&gt;[2]&lt;/a&gt; but it
+is particularly true for me.&lt;/p&gt;
+&lt;p&gt;I tend to balance a little more on the side of preferring quality over speed of
+delivery. That means when I write code I will often want to look at it and
+shuffle the logic. The editing process is rewarding for me. I thrive on the
+puzzle, in rearranging the pieces, shaving here and gluing there to make the
+shape serve this purpose or that one better.&lt;/p&gt;
+&lt;p&gt;I got to exercise that recently when I was reviewing a change and find the
+following logic proposed by folks, somewhat in jest: &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id10" id="id3"&gt;[3]&lt;/a&gt; &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id11" id="id4"&gt;[4]&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_9b6c5580261b4fe9abd7deef8c1ce1ae-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says:&lt;/span&gt;
+&lt;a name="rest_code_9b6c5580261b4fe9abd7deef8c1ce1ae-2"&gt;&lt;/a&gt;&lt;span class="c1"&gt;#   if the implementation is hard to explain, it's a bad idea&lt;/span&gt;
+&lt;a name="rest_code_9b6c5580261b4fe9abd7deef8c1ce1ae-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;reduce&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;or&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_9b6c5580261b4fe9abd7deef8c1ce1ae-4"&gt;&lt;/a&gt;              &lt;span class="nb"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;hr class="docutils"&gt;
+&lt;p&gt;Myself, I like functional style solutions to problems. But in Python it can take
+a form that looks unlike many others. The lambda syntax is a bit verbose. The
+primitive building blocks to functional style like &lt;tt class="docutils literal"&gt;map&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;filter&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;reduce&lt;/tt&gt; functions are relegated to the corner and the alternatives are
+promoted (moved from builtin space to functools in Python 3). All of this holds
+with the Zen of Python &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id12" id="id5"&gt;[5]&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;map&lt;/tt&gt; usage here is basic. If you can't read that the purpose is to
+generate a list of &lt;tt class="docutils literal"&gt;True&lt;/tt&gt; of &lt;tt class="docutils literal"&gt;False&lt;/tt&gt; values, one for each entry in the
+&lt;tt class="docutils literal"&gt;migrations&lt;/tt&gt; list. It is the equivalent to either of the following:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says:&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-2"&gt;&lt;/a&gt;&lt;span class="c1"&gt;#   if the implementation is easy to explain, it may be a good idea&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;like_map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-4"&gt;&lt;/a&gt;  &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-5"&gt;&lt;/a&gt;  &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-6"&gt;&lt;/a&gt;    &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-7"&gt;&lt;/a&gt;  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-9"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says: flat is better than nested&lt;/span&gt;
+&lt;a name="rest_code_2790ab410dda4488b7c3301656f10216-10"&gt;&lt;/a&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;hr class="docutils"&gt;
+&lt;p&gt;But what is that &lt;tt class="docutils literal"&gt;reduce&lt;/tt&gt; operation doing? To read that at a first pass it
+helps to have experience working in functional languages in which case you might
+have seen the pattern. Reduce will take N items as input and reduce them to a
+single output, in this case &lt;tt class="docutils literal"&gt;True&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;False&lt;/tt&gt;. This reduce expression
+(&lt;tt class="docutils literal"&gt;x or y&lt;/tt&gt;) then will just &lt;tt class="docutils literal"&gt;or&lt;/tt&gt; the list returned by the &lt;tt class="docutils literal"&gt;map&lt;/tt&gt; operation.
+If any &lt;tt class="docutils literal"&gt;m.has_migrations()&lt;/tt&gt; for &lt;tt class="docutils literal"&gt;m&lt;/tt&gt; in &lt;tt class="docutils literal"&gt;migrations&lt;/tt&gt;, then the final result
+is &lt;tt class="docutils literal"&gt;True&lt;/tt&gt;, otherwise &lt;tt class="docutils literal"&gt;False&lt;/tt&gt;. We could simplify that logic to either of the
+following:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says: readability counts&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-2"&gt;&lt;/a&gt;&lt;span class="n"&gt;pending_migrations&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-3"&gt;&lt;/a&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;pending_migrations&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-4"&gt;&lt;/a&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-5"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says: simple is better than complex&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-6"&gt;&lt;/a&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-7"&gt;&lt;/a&gt;  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-8"&gt;&lt;/a&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;a name="rest_code_38bb5db95dba4669ad7f3f3cecdd6fe1-9"&gt;&lt;/a&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;/pre&gt;&lt;hr class="docutils"&gt;
+&lt;p&gt;Either of these would be a great solution. They are both explicit, simple, and
+easy to explain.&lt;/p&gt;
+&lt;p&gt;The first is also flat and readable. The list comprehension &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id13" id="id6"&gt;[6]&lt;/a&gt; is the most
+complex yet concise element here, but with a basic familiarity with
+comprehensions it reads very well.&lt;/p&gt;
+&lt;p&gt;The second relies on syntax that anyone who has done a couple weeks of
+programming in nearly any language can decipher (I avoided the use of for-else
+because while it would be technically correct it is an unnecessary use of that
+language feature and more verbose) but it has non-linear flow control and while
+the logic is simple it doesn't convey meaning concisely.&lt;/p&gt;
+&lt;p&gt;We can do better.&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_ac73b917b6ac4215b835e7206334f63b-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# Tao of Python says: beautiful is better than ugly&lt;/span&gt;
+&lt;a name="rest_code_ac73b917b6ac4215b835e7206334f63b-2"&gt;&lt;/a&gt;&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;any&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has_migrations&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;hr class="docutils"&gt;
+&lt;p&gt;Now the code reads beautifully. If you forgive the syntax and a bit of the
+dialect of writing software, it expresses an idea simply:&lt;/p&gt;
+&lt;blockquote&gt;
+"Does any x has_migrations for each x in migrations?"&lt;/blockquote&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;blockquote&gt;
+"Does any object in this list have migrations to perform?"&lt;/blockquote&gt;
+&lt;p&gt;When someone comes back to read this, it should take very little time to
+comprehend regardless of their experience level with the language. When we
+strive toward any of these last two sets of solutions and use the concise and
+unambiguous elements of our language we place a lower working memory load &lt;a class="footnote-reference" href="https://stevelle.me/posts/write-once-read-many/#id14" id="id7"&gt;[7]&lt;/a&gt;
+on ourselves and others. We are not likely to spend less time reading code, in
+the end for a few reasons but if we apply this refinement technique in some
+parts of a project that frees us to focus on the hard parts that really are
+complex.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="docutils footnote" frame="void" id="id8" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://blogs.msdn.microsoft.com/peterhal/2006/01/04/what-do-programmers-really-do-anyway-aka-part-2-of-the-yardstick-saga/"&gt;MSDN Blogs: What do programmers really do anyway?&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id9" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://blogs.msdn.microsoft.com/oldnewthing/20070406-00/?p=27343"&gt;MSDN Blogs: Code is read much more often than it is written, so plan
+accordingly&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id10" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id3"&gt;[3]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://review.openstack.org/#/c/392993/"&gt;OpenStack Change-Id: Ie839e0f240436dce7b151de5b464373516ff5a64&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id11" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id4"&gt;[4]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;This logic is not in a tight loop, and doesn't operate over large data
+sets so the concerns of efficiency, performance, or memory optimization are
+not paramount in this case so I'm not going to mention them.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id12" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id5"&gt;[5]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0020/"&gt;Python PEP 20 -- The Zen of Python&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id13" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id6"&gt;[6]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0202/"&gt;Python PEP 202  -- List Comprehensions&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id14" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id7"&gt;[7]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Working_memory"&gt;Wikipedia: Working Memory&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>process</category><category>refactoring</category><category>style</category><guid>https://stevelle.me/posts/write-once-read-many/</guid><pubDate>Sat, 04 Feb 2017 01:34:12 GMT</pubDate></item><item><title>Disposable Development Environments</title><link>https://stevelle.me/posts/disposable-development-environments/</link><dc:creator>Steve Lewis</dc:creator><description>&lt;div&gt;&lt;p&gt;I might be taking things too far with my development environments, but I really
+don't like the idea that my development environment might be special. That
+could mean many things.&lt;/p&gt;
+&lt;p&gt;Consider the case where my development environment has lots of stuff installed
+which might not be enumerated in the Developer Documentation or Getting Started
+guide or README file that makes things work for me but keeps others from being
+able to quickly have the same success with whatever environment they might be
+starting from. That is a rotten way to onboard new team members or welcome new
+contributors, so keeping yourself aware of what it takes to go from zero to
+developing is important.&lt;/p&gt;
+&lt;p&gt;I deteste the similar case where my development environment has lots of stuff
+installed which cause my environment to behave differently from an automated
+testing environment or any place it might be deployed. There are a lot of ways
+to get an advantage over this particular gremlin too.&lt;/p&gt;
+&lt;p&gt;Lastly, I loath the situation where you have to work on a new or temporary
+device, or you end up having to nuke and start over with a fresh operating
+system. Lose all produtivity while you install and customize your working
+environment during production environment outage due to a critical bug one time
+and you might feel the same.&lt;/p&gt;
+&lt;p&gt;So I realize that app containers are the hotness, but none of the apps I work on
+for OpenStack or for Rackspace include manifests for the dominant container
+orchestration tools. That isn't to say nobody has run them in Docker, but I'm
+not really that interested in dinking around with deploying all the various
+pieces needed and fixing all the broken windows along the way.&lt;/p&gt;
+&lt;p&gt;Take the Glance project as an example. A typical deploy of Glance requires
+MariaDB, RabbitMQ, Glance API, Glance Registry, the ability to run Glance Manage
+and Glance Cache, and possibly also a Glance Scrubber in daemon mode in order to
+have a complete ecosystem. That is all needed just to use the filesystem storage
+driver in the container. I don't really want to maintain 7 different app
+containers on my development host box (murdering my battery life as they spin up
+and down). That is neglecting the need to keep 3 versions of each manifest of
+the deploy tools tailored to the needs of each branch of Glance (master an 2
+stable branches) in service at a time as well as having each manifest accomodate
+the various customizations needed in service configuration, and keep them all in
+sync.&lt;/p&gt;
+&lt;p&gt;This is in part why we have Devstack &lt;a class="footnote-reference" href="https://stevelle.me/posts/disposable-development-environments/#id6" id="id1"&gt;[1]&lt;/a&gt; within the OpenStack community, as it
+provides a ready-to-eat means of deploying and configuing all the pieces to a
+single [virtual] host. That could be an OS container &lt;a class="footnote-reference" href="https://stevelle.me/posts/disposable-development-environments/#id7" id="id2"&gt;[2]&lt;/a&gt; (such as LXD &lt;a class="footnote-reference" href="https://stevelle.me/posts/disposable-development-environments/#id8" id="id3"&gt;[3]&lt;/a&gt;) as
+well, but whatever.&lt;/p&gt;
+&lt;p&gt;I work from any of two different Mac laptops a Windows desktop, or a Linux
+workstation, but mostly I work from one of the laptops. The churn of builds and
+package installs is slower locally and kills my laptop's battery life, so I use
+virtual machines in the Rackspace public cloud for almost all of my work. But
+this requires a fair bit of machinery, I want pip to install the right python
+package versions of the OpenStack and Nova clients, and their prerequisites. I
+want the right cloud.yml or open.rc file which are used to contain authorization
+credentials and I want to ensure my SSH private key is used for authentication.
+And even then, I don't want to use the OpenStack or Nova client directly, when
+there are only two to three things I might want different between each virtual
+machine instance I work from, (name, flavor, image).&lt;/p&gt;
+&lt;p&gt;So I go one step further. I install VirtualBox and Vagrant directly on the
+laptop, and I pull down one private git repository in order to get the laptop
+set up as a development environment.  From there it's as easy as changing
+directory into the repository and entering one command.&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_b58eb053246a455ba75eeb2cbb240862-1"&gt;&lt;/a&gt;$ vagrant up &amp;amp;&amp;amp; vagrant ssh
+&lt;/pre&gt;&lt;p&gt;The git repository has a Vagrantfile which specifies a current distro release to
+use as a development jumpbox. The provisioning scripting in the Vagrantfile sets
+up all of the libraries, SSH Agent, and credentials for me under the vagrant
+user and then pulls down another git repository &lt;a class="footnote-reference" href="https://stevelle.me/posts/disposable-development-environments/#id9" id="id4"&gt;[4]&lt;/a&gt; which contains a few more
+shortcuts to simplify my work (at time of writing I have a bunch of changes on
+my private git hosts which I haven't cloned to github so what's visible may not
+even work but I assure you I have a git source which does should the laptop need
+to be nuked) including setting up my shell, vim, etc. preferences inside the
+cloud VM.&lt;/p&gt;
+&lt;p&gt;I can spin up new development environments for any project I want to work on
+after that, isolating each project along with it's system and language-specific
+package requirements, and the language specific tooling. Sometimes that is done
+with Ansible playbooks, sometimes using project-specific bootstrapping scripts,
+(all helpfully cloned into the Vagrant VM by the provisioning scripts) from the
+Vagrant VM.&lt;/p&gt;
+&lt;p&gt;To recap: I navigate from the laptop where I do most of my work, to a VM on the
+host, to a VM in the cloud where my workspace lives. It's a bit convoluted but
+the battery drain isn't too bad (compared to just invoking ssh directly from the
+laptop, which is an option but not always as convenient), all the bits are
+highly agnostic to host OS, and the steps needed to get myself into a
+productive mode on any given environment are really minimal and stable.&lt;/p&gt;
+&lt;p&gt;On a regular basis I seem to blow away the VM on the laptop and rebuild for one
+reason or another and this has been remarkably stable over time, with only one
+or two things I tweak every few months as I come up with more customizations or
+resolve a new issue. Most recently I found that my VirtualBox upgraded to a
+version more recent than that supported by Vagrant, so I just updated that and
+everything started to hum again. On the other hand when I end up with any kind
+of dependency hell on the jumpbox VM it's never further away than:&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_7a296c2ebb3a468d9dd81f2741cd6664-1"&gt;&lt;/a&gt;$ vagrant destroy -f &amp;amp;&amp;amp; vagrant up
+&lt;/pre&gt;&lt;p&gt;All things considered, I could simplify this set up considerably by eliminating
+the jumpbox VM with the use of a virtual environment to contain the bits needed
+to connect to the various OpenStack clouds I might operate my development VMs
+on. The problem there is of course that this sort of refactoring usually
+happens at highly irregular intervals and I just haven't found the time &lt;a class="footnote-reference" href="https://stevelle.me/posts/disposable-development-environments/#id10" id="id5"&gt;[5]&lt;/a&gt;.&lt;/p&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/disposable-development-environments/#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://docs.openstack.org/developer/devstack/"&gt;Devstack&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id7" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/disposable-development-environments/#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://linuxcontainers.org/"&gt;LinuxContainers.org&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id8" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/disposable-development-environments/#id3"&gt;[3]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://www.ubuntu.com/cloud/lxd"&gt;LXD&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id9" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/disposable-development-environments/#id4"&gt;[4]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://github.com/stevelle/instancer"&gt;github.com/stevelle/instancer&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id10" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/disposable-development-environments/#id5"&gt;[5]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://tvtropes.org/pmwiki/pmwiki.php/Main/TheCobblersChildrenHaveNoShoes"&gt;The cobblers children have no shoes&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;</description><category>tools</category><guid>https://stevelle.me/posts/disposable-development-environments/</guid><pubDate>Mon, 23 Jan 2017 21:20:25 GMT</pubDate></item><item><title>Making It Right</title><link>https://stevelle.me/posts/making-it-right/</link><dc:creator>Steve Lewis</dc:creator><description>&lt;div&gt;&lt;p&gt;We broke a downstream project in the last week before their release deadline.
+This is about making it right for them.&lt;/p&gt;
+&lt;p&gt;Today members of the Glace contributors team were alerted &lt;a class="footnote-reference" href="https://stevelle.me/posts/making-it-right/#id7" id="id1"&gt;[1]&lt;/a&gt;
+that we had broken and blocked OpenStackClient with our change &lt;a class="footnote-reference" href="https://stevelle.me/posts/making-it-right/#id8" id="id2"&gt;[2]&lt;/a&gt; to support
+community images &lt;a class="footnote-reference" href="https://stevelle.me/posts/making-it-right/#id9" id="id3"&gt;[3]&lt;/a&gt;. Folks were already in the process of beginning to
+diagnose the issue when my day started.&lt;/p&gt;
+&lt;p&gt;It became clear that we had lots of cooks in this particular kitchen so I
+moved over to another VM where I was testing changes &lt;a class="footnote-reference" href="https://stevelle.me/posts/making-it-right/#id10" id="id4"&gt;[4]&lt;/a&gt; to the
+python-glanceclient project related to the community images feature.&lt;/p&gt;
+&lt;p&gt;A candidate fix for the breakage became available &lt;a class="footnote-reference" href="https://stevelle.me/posts/making-it-right/#id11" id="id5"&gt;[5]&lt;/a&gt; from another contributor.
+The change was small, one change to logic, and a new functional test. I
+switched contexts to begin reviewing it and testing it. Zuul &lt;a class="footnote-reference" href="https://stevelle.me/posts/making-it-right/#id12" id="id6"&gt;[6]&lt;/a&gt; was reporting
+a long queue, as lots of projects are feeling the crunch of the clients release
+deadline, Ocata-3 milestone and feature and string freezes coming quickly.
+Because of this I expected Jenkins gates to take their time coming back with a
+vote so I started automated tests featuring just the additional test and without
+the community images commit as a baseline. While that was running I started
+combing over the changes in detail.&lt;/p&gt;
+&lt;p&gt;I got distracted from this by an email that came in signaling something in
+Rackspace that needed me to respond quickly. That dispatched I returned to
+see that the baseline testing showed the additional test should pass before
+the community images feature, which is what was expected. I smashed the keys
+a bit and started a test run to test the fix with the community images
+feature. The work email from before resurfaced again, and so I hammered out
+another response, caught up on IRC traffic, and returned to that code review.&lt;/p&gt;
+&lt;p&gt;When I completed the review, I tabbed over to look at the tests again and as
+hoped everything passed. I updated folks on IRC and we proceeded to tag the
+as ready to be merged. All the while, Zuul was busy grinding away on that
+backlog of work before it could start the first pass of testing for this fix.&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;p&gt;Fast forward&lt;/p&gt;
+&lt;p&gt;Jenkins reports that the fix failed to pass the multiple scenarios in testing.
+Inspection reports a few broken functional tests, 23 in all. What did I do
+wrong? At this point I see the same set of tests failing under different
+scenarios, and those tests are all related to the v1 API. That's why I know I
+screwed up the review and approved a bad patch. My suspicion is that I made a
+mistake somewhere in set up of that second test run.&lt;/p&gt;
+&lt;p&gt;At this point, it's more important to get things fixed because downstream
+projects are still broken. It's a Friday afternoon and I'm sure at this point
+we have shot any productivity down there but nobody wants to come in to find
+the world broken on a Monday morning on the week of a deadline, so I'm
+expecting to kill non-critical distractions and get into it again. I know I'm
+not alone in the desire to do that, but the original author of the fix has
+finished up his workday and checked-out so we have one less core, and one less
+set of eyeballs familiar with the context.&lt;/p&gt;
+&lt;p&gt;The failing tests are all functional tests, and all focused on the v1 API. The
+failures seem to highlight a failure to create images (note: the candidate fix
+that causes the failures was addressing an issue with updating images). That
+leads me to suspect that the issue is with the specific change of the candidate
+fix. I started combing through the file (related to the sqlalchemy db storage
+engine, as opposed to the simple db storage engine which is the only other
+concrete db engine supported. The change which broke things only touched the
+sqlalchemy engine code, and the sqlalchemy engine code is specifically
+exercised by some if not all of the failing tests, so that helps me choose
+which engine to fix, but I inspected both as a means of contrasting them. I'm
+staring at a function that runs if something is true, and some other thing that
+happens otherwise... the pieces are coming together.&lt;/p&gt;
+&lt;p&gt;The important point here is that clues about the scope of the breakage are
+invaluable in pinpointing potential causes. Identifying what is common among a
+set of tests which break is a helpful step. In this case it was many tests
+breaking because they all used a common bit of code to create an image in
+Glance as part of setting the tests preconditions.&lt;/p&gt;
+&lt;p&gt;The whole thing started because there was a gap in the existing automated
+testing, both functional and unit testing could have identified the problem
+with the initial community images implementation but code coverage is always a
+balancing act. The more tests you have, the safer you might be but time to
+imagine them is limited when there are other features or bugs you could spend
+that time on. And in any long-lived project the coverage you have tends to
+never be good enough. I find it helpful to just keep my expectations low and
+hope that the tests will catch stuff but never be surprised when a gap is
+discovered. Expect that you are working with incomplete information.&lt;/p&gt;
+&lt;p&gt;The original candidate fix was crafted with the help of a functional test which
+was used to first model the bug before the cause was identified. This is a
+great way to begin pinning down the problem, not only because it allows you to
+capture the information from a bug report but it gives you leverage toward
+identifying the cause as you can quickly drive toward the point of the failure
+by running the test, combined with debug breakpoints or trace logging as
+breadcrumbs leaving a trail through the code. Finally having that test allows
+you to verify your fix and address the gap in test coverage gives confidence
+that you won't have to repeat this work later.&lt;/p&gt;
+&lt;p&gt;One final lesson is to be found in investigating why my testing of the first
+candidate fix passed when they failed in Jenkins. For that I had to inspect my
+shell history. The gist of it is that when I was juggling states with git I
+ended up with an incomplete application of the candidate fix in my workspace.
+Specifically I ended up without the change to the sqlalchemy engine at all. In
+that case, good git habits and workspace hygiene is important. Managing
+distractions is the other side of this because the point where I was
+interrupted by email the first time is when I made my mistake in setting up
+the workspace for the second run.&lt;/p&gt;
+&lt;p&gt;The fix is merged and the downstream projects are unblocked. Maybe Monday
+will be less exciting.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;table class="docutils footnote" frame="void" id="id7" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/making-it-right/#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://lists.openstack.org/pipermail/openstack-dev/2017-January/110575.html"&gt;[openstack-dev] [osc][openstackclient][glance] broken image functional
+test&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id8" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/making-it-right/#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://review.openstack.org/#/c/369110/"&gt;OpenStack Change-Id: I94bc7708b291ce37319539e27b3e88c9a17e1a9f&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id9" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/making-it-right/#id3"&gt;[3]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://specs.openstack.org/openstack/glance-specs/specs/newton/approved/glance/community_visibility.html"&gt;Glance spec: Add community-level image sharing&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id10" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/making-it-right/#id4"&gt;[4]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://review.openstack.org/#/c/352892/"&gt;OpenStack Change-Id: If8c0e0843270ff718a37ca2697afeb8da22aa3b1&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id11" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/making-it-right/#id5"&gt;[5]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://review.openstack.org/#/c/423499/"&gt;OpenStack Change-Id: I996fbed2e31df8559c025cca31e5e12c4fb76548&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id12" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/making-it-right/#id6"&gt;[6]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://status.openstack.org/zuul/"&gt;OpenStack Zuul -- common continuous integration service&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>quality</category><guid>https://stevelle.me/posts/making-it-right/</guid><pubDate>Sat, 21 Jan 2017 01:47:54 GMT</pubDate></item></channel></rss>
