@@ -5,6 +5,7 @@
   become_method: sudo
   roles:
     - role: caddy-ansible
+      caddy_systemd_network_dependency: false
       caddy_config: |
         stevelle.me, www.stevelle.me, www1.stevelle.me {
           gzip
