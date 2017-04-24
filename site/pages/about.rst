@@ -7,10 +7,10 @@
 .. description: 
 .. type: text
 
-The author is a software developer at Rackspace where he works as a core
+The author was most recently a software developer at Rackspace working as core
 reviewer for a few OpenStack projects and is engaged with a few others. He
-acts as technical lead for Glance with the `OpenStack Innovation Center 
-<https://www.osic.org>`_. He was previously a principal developer and team
+acted as technical lead for Glance with the `OpenStack Innovation Center 
+<https://www.osic.org>`_. Steve was previously a principal developer and team
 lead at Monsoon Commerce. He holds a BS in Computer and Information Science
 from the University of Oregon.
 
@@ -26,5 +26,5 @@ Also found at:
 * `GitHub <https://github.com/stevelle/>`_
 * `Twitter <https://www.twitter.com/stevelle/>`_
 * `Flickr <https://www.flickr.com/photos/nepolon/>`_
-* `LinkedIn <www.linkedin.com/in/stevenjlewis/>`_
+* `LinkedIn <https://www.linkedin.com/in/stevenjlewis/>`_
 
