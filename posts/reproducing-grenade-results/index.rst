@@ -25,6 +25,8 @@ Step 1: Set the stage
 
 Step 2: Prepare the host to emulate the gate
 
+In the VM
+
 .. code-block:: 
 
    cd /opt # or somewhere you want to put stuff
@@ -47,6 +49,7 @@ In a browser
 - find the ``reproduce.sh`` script in the ``logs`` directory
 - ``copy link location`` for this script
 
+In the VM
 
 .. code-block:: 
 

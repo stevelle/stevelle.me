@@ -112,11 +112,12 @@ fix the broken build.</p>
 <li>Prepare it with any personal customizations and tailor to your tool preferences appropriate to a disposable working environment.</li>
 </ul>
 <p>Step 2: Prepare the host to emulate the gate</p>
-<pre class="code text"><a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-1"></a>cd /opt # or somewhere you want to put stuff
-<a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-2"></a>git clone https://github.com/JohnVillalovos/devstack-gate-test.git
-<a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-3"></a>cd devstack-gate-test
-<a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-4"></a>./vm-setup.sh
-<a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-5"></a>su - jenkins
+<p>In the VM</p>
+<pre class="code text"><a name="rest_code_2355a1794b224383a961726e812bd8d8-1"></a>cd /opt # or somewhere you want to put stuff
+<a name="rest_code_2355a1794b224383a961726e812bd8d8-2"></a>git clone https://github.com/JohnVillalovos/devstack-gate-test.git
+<a name="rest_code_2355a1794b224383a961726e812bd8d8-3"></a>cd devstack-gate-test
+<a name="rest_code_2355a1794b224383a961726e812bd8d8-4"></a>./vm-setup.sh
+<a name="rest_code_2355a1794b224383a961726e812bd8d8-5"></a>su - jenkins
 </pre>
 <p>Step 2.5: [optional]</p>
 <ul class="simple">
@@ -130,10 +131,11 @@ fix the broken build.</p>
 <li>
 <tt class="docutils literal">copy link location</tt> for this script</li>
 </ul>
-<pre class="code text"><a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-1"></a>cd ..
-<a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-2"></a>wget [paste-url]
-<a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-3"></a>chmod u+x reproduce.sh
-<a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-4"></a>./reproduce.sh
+<p>In the VM</p>
+<pre class="code text"><a name="rest_code_3007c092dd974f85ac9d775bc3751a61-1"></a>cd ..
+<a name="rest_code_3007c092dd974f85ac9d775bc3751a61-2"></a>wget [paste-url]
+<a name="rest_code_3007c092dd974f85ac9d775bc3751a61-3"></a>chmod u+x reproduce.sh
+<a name="rest_code_3007c092dd974f85ac9d775bc3751a61-4"></a>./reproduce.sh
 </pre>
 <p>Now just kick back and watch the cargage!</p>
 <img alt="/images/trainwreck.gif" src="../../images/trainwreck.gif">
