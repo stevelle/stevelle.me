@@ -28,17 +28,3 @@
             X-Frame-Options "DENY"
           }
         }
-  post_tasks:
-    - name: Find private key files
-      find: 
-        paths: /etc/ssl/caddy
-        recurse: yes
-      tags: keys
-      register: key_files
-    - name: Backup private key files
-      fetch:
-        src: "{{ item.path }}"
-        dest: ../ssl_keys
-      with_items: "{{ key_files.files }}"
-      tags: keys
-
