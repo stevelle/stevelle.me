@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title> (Posts about openstack)</title><link>https://stevelle.me/</link><description></description><atom:link href="https://stevelle.me/categories/openstack.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 24 Apr 2017 01:03:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Reproducing OpenStack Grenade gate job results</title><link>https://stevelle.me/posts/reproducing-grenade-results/</link><description>&lt;div&gt;&lt;p&gt;Step 1:
+# Provision a new VM which could run a gate job.
+# Prepare it with any personal customizations and tailor to your tool
+# preferences appropriate to a disposable working environment.&lt;/p&gt;
+&lt;p&gt;Step 2:
+# Prepare the host to emulate the gate
+cd /opt # or somewhere you want to put stuff
+git clone &lt;a class="reference external" href="https://github.com/JohnVillalovos/devstack-gate-test.git"&gt;https://github.com/JohnVillalovos/devstack-gate-test.git&lt;/a&gt;
+cd devstack-gate-test
+./vm-setup.sh
+su - jenkins&lt;/p&gt;
+&lt;p&gt;Step 2.5: [optional]
+# Snapshot the instance here for convenience&lt;/p&gt;
+&lt;p&gt;Step 3:
+# Execute the reproduction event
+# [in a browser]
+# - click the link of the correct gate job from the review you want to reproduce
+# - find the &lt;tt class="docutils literal"&gt;reproduce.sh&lt;/tt&gt; script in the &lt;tt class="docutils literal"&gt;logs&lt;/tt&gt; directory
+# - &lt;tt class="docutils literal"&gt;copy link location&lt;/tt&gt; for this script&lt;/p&gt;
+&lt;p&gt;cd ..
+wget [paste-url]
+chmod u+x reproduce.sh
+./reproduce.sh&lt;/p&gt;&lt;/div&gt;</description><category>grenade</category><category>openstack</category><category>zuul</category><guid>https://stevelle.me/posts/reproducing-grenade-results/</guid><pubDate>Wed, 15 Mar 2017 23:21:22 GMT</pubDate></item></channel></rss>
