@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>stevelle.me</title><link>https://stevelle.me/</link><description>Collected mutterings and rambling emissions</description><atom:link href="https://stevelle.me/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 24 Apr 2017 01:06:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Reproducing OpenStack Grenade gate job results</title><link>https://stevelle.me/posts/reproducing-grenade-results/</link><description>&lt;div&gt;&lt;p&gt;Step 1:
-# Provision a new VM which could run a gate job.
-# Prepare it with any personal customizations and tailor to your tool
-# preferences appropriate to a disposable working environment.&lt;/p&gt;
-&lt;p&gt;Step 2:
-# Prepare the host to emulate the gate
-cd /opt # or somewhere you want to put stuff
-git clone &lt;a class="reference external" href="https://github.com/JohnVillalovos/devstack-gate-test.git"&gt;https://github.com/JohnVillalovos/devstack-gate-test.git&lt;/a&gt;
-cd devstack-gate-test
-./vm-setup.sh
-su - jenkins&lt;/p&gt;
-&lt;p&gt;Step 2.5: [optional]
-# Snapshot the instance here for convenience&lt;/p&gt;
-&lt;p&gt;Step 3:
-# Execute the reproduction event
-# [in a browser]
-# - click the link of the correct gate job from the review you want to reproduce
-# - find the &lt;tt class="docutils literal"&gt;reproduce.sh&lt;/tt&gt; script in the &lt;tt class="docutils literal"&gt;logs&lt;/tt&gt; directory
-# - &lt;tt class="docutils literal"&gt;copy link location&lt;/tt&gt; for this script&lt;/p&gt;
-&lt;p&gt;cd ..
-wget [paste-url]
-chmod u+x reproduce.sh
-./reproduce.sh&lt;/p&gt;&lt;/div&gt;</description><category>grenade</category><category>openstack</category><category>zuul</category><guid>https://stevelle.me/posts/reproducing-grenade-results/</guid><pubDate>Wed, 15 Mar 2017 23:21:22 GMT</pubDate></item><item><title>Learning As Performance, part 1</title><link>https://stevelle.me/posts/learning-as-performance-1/</link><description>&lt;div&gt;&lt;p&gt;Let's talk about performance reviews &lt;a class="footnote-reference" href="https://stevelle.me/posts/learning-as-performance-1/#id4" id="id1"&gt;[1]&lt;/a&gt;. Consistently, performance reviews
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>stevelle.me</title><link>https://stevelle.me/</link><description>Collected mutterings and rambling emissions</description><atom:link href="https://stevelle.me/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 24 Apr 2017 02:26:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Reproducing OpenStack Grenade gate job results</title><link>https://stevelle.me/posts/reproducing-grenade-results/</link><dc:creator>@stevelle</dc:creator><description>&lt;div&gt;&lt;p&gt;This is just a really quick post to capture something learned.&lt;/p&gt;
+&lt;p&gt;Imagine your CI job fails. Imagine you can't tell why easily because
+there are so many moving parts in the CI. Imagine you are asked to
+fix the broken build.&lt;/p&gt;
+&lt;img alt="/images/tbss.gif" src="https://stevelle.me/images/tbss.gif"&gt;
+&lt;p&gt;This post is about how I got past that.&lt;/p&gt;
+&lt;p&gt;Step 1: Set the stage&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Provision a new VM which could run a gate job.&lt;/li&gt;
+&lt;li&gt;Prepare it with any personal customizations and tailor to your tool preferences appropriate to a disposable working environment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Step 2: Prepare the host to emulate the gate&lt;/p&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-1"&gt;&lt;/a&gt;cd /opt # or somewhere you want to put stuff
+&lt;a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-2"&gt;&lt;/a&gt;git clone https://github.com/JohnVillalovos/devstack-gate-test.git
+&lt;a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-3"&gt;&lt;/a&gt;cd devstack-gate-test
+&lt;a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-4"&gt;&lt;/a&gt;./vm-setup.sh
+&lt;a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-5"&gt;&lt;/a&gt;su - jenkins
+&lt;/pre&gt;&lt;p&gt;Step 2.5: [optional]&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Snapshot the instance here for convenience&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Step 3: Execute the reproduction event&lt;/p&gt;
+&lt;p&gt;In a browser&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;click the link of the correct gate job from the review you want to reproduce&lt;/li&gt;
+&lt;li&gt;find the &lt;tt class="docutils literal"&gt;reproduce.sh&lt;/tt&gt; script in the &lt;tt class="docutils literal"&gt;logs&lt;/tt&gt; directory&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;copy link location&lt;/tt&gt; for this script&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code text"&gt;&lt;a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-1"&gt;&lt;/a&gt;cd ..
+&lt;a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-2"&gt;&lt;/a&gt;wget [paste-url]
+&lt;a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-3"&gt;&lt;/a&gt;chmod u+x reproduce.sh
+&lt;a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-4"&gt;&lt;/a&gt;./reproduce.sh
+&lt;/pre&gt;&lt;p&gt;Now just kick back and watch the cargage!&lt;/p&gt;
+&lt;img alt="/images/trainwreck.gif" src="https://stevelle.me/images/trainwreck.gif"&gt;&lt;/div&gt;</description><category>grenade</category><category>openstack</category><category>zuul</category><guid>https://stevelle.me/posts/reproducing-grenade-results/</guid><pubDate>Wed, 15 Mar 2017 23:21:22 GMT</pubDate></item><item><title>Learning As Performance, part 1</title><link>https://stevelle.me/posts/learning-as-performance-1/</link><dc:creator>@stevelle</dc:creator><description>&lt;div&gt;&lt;p&gt;Let's talk about performance reviews &lt;a class="footnote-reference" href="https://stevelle.me/posts/learning-as-performance-1/#id4" id="id1"&gt;[1]&lt;/a&gt;. Consistently, performance reviews
 have been uncomfortable for me. I feel awkward about the standard questions used
 in reviews and in self-assessments and don't want to go through the process
 because there will always be some uncomfortable moments in there which would be
@@ -102,7 +113,7 @@ individual learnings so they are available at performance review time.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/blockquote&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>performance_management</category><category>thinkings</category><guid>https://stevelle.me/posts/learning-as-performance-1/</guid><pubDate>Sat, 11 Feb 2017 03:25:51 GMT</pubDate></item><item><title>Write once, Read and rewrite many</title><link>https://stevelle.me/posts/write-once-read-many/</link><description>&lt;div&gt;&lt;blockquote&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>performance_management</category><category>thinkings</category><guid>https://stevelle.me/posts/learning-as-performance-1/</guid><pubDate>Sat, 11 Feb 2017 03:25:51 GMT</pubDate></item><item><title>Write once, Read and rewrite many</title><link>https://stevelle.me/posts/write-once-read-many/</link><dc:creator>@stevelle</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;“Indeed, the ratio of time spent reading versus writing is well over 10 to
 1. We are constantly reading old code as part of the effort to write new
 code. ...[Therefore,] making it easy to read makes it easier to write.”&lt;/p&gt;
@@ -236,7 +247,7 @@ not paramount in this case so I'm not going to mention them.&lt;/td&gt;&lt;/tr&g
 &lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/write-once-read-many/#id7"&gt;[7]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Working_memory"&gt;Wikipedia: Working Memory&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/blockquote&gt;&lt;/div&gt;</description><category>process</category><category>refactoring</category><category>style</category><guid>https://stevelle.me/posts/write-once-read-many/</guid><pubDate>Sat, 04 Feb 2017 01:34:12 GMT</pubDate></item><item><title>Disposable Development Environments</title><link>https://stevelle.me/posts/disposable-development-environments/</link><description>&lt;div&gt;&lt;p&gt;I might be taking things too far with my development environments, but I really
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>process</category><category>refactoring</category><category>style</category><guid>https://stevelle.me/posts/write-once-read-many/</guid><pubDate>Sat, 04 Feb 2017 01:34:12 GMT</pubDate></item><item><title>Disposable Development Environments</title><link>https://stevelle.me/posts/disposable-development-environments/</link><dc:creator>@stevelle</dc:creator><description>&lt;div&gt;&lt;p&gt;I might be taking things too far with my development environments, but I really
 don't like the idea that my development environment might be special. That
 could mean many things.&lt;/p&gt;
 &lt;p&gt;Consider the case where my development environment has lots of stuff installed
@@ -354,7 +365,7 @@ happens at highly irregular intervals and I just haven't found the time &lt;a cl
 &lt;tbody valign="top"&gt;
 &lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://stevelle.me/posts/disposable-development-environments/#id5"&gt;[5]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://tvtropes.org/pmwiki/pmwiki.php/Main/TheCobblersChildrenHaveNoShoes"&gt;The cobblers children have no shoes&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;&lt;/div&gt;</description><category>tools</category><guid>https://stevelle.me/posts/disposable-development-environments/</guid><pubDate>Mon, 23 Jan 2017 21:20:25 GMT</pubDate></item><item><title>Making It Right</title><link>https://stevelle.me/posts/making-it-right/</link><description>&lt;div&gt;&lt;p&gt;We broke a downstream project in the last week before their release deadline.
+&lt;/table&gt;&lt;/div&gt;</description><category>tools</category><guid>https://stevelle.me/posts/disposable-development-environments/</guid><pubDate>Mon, 23 Jan 2017 21:20:25 GMT</pubDate></item><item><title>Making It Right</title><link>https://stevelle.me/posts/making-it-right/</link><dc:creator>@stevelle</dc:creator><description>&lt;div&gt;&lt;p&gt;We broke a downstream project in the last week before their release deadline.
 This is about making it right for them.&lt;/p&gt;
 &lt;p&gt;Today members of the Glace contributors team were alerted &lt;a class="footnote-reference" href="https://stevelle.me/posts/making-it-right/#id7" id="id1"&gt;[1]&lt;/a&gt;
 that we had broken and blocked OpenStackClient with our change &lt;a class="footnote-reference" href="https://stevelle.me/posts/making-it-right/#id8" id="id2"&gt;[2]&lt;/a&gt; to support

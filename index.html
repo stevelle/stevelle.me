@@ -83,29 +83,42 @@ article: http://ogp.me/ns/article#
         </div>
     </header><div class="e-content entry-content">
     <div>
-<p>Step 1:
-# Provision a new VM which could run a gate job.
-# Prepare it with any personal customizations and tailor to your tool
-# preferences appropriate to a disposable working environment.</p>
-<p>Step 2:
-# Prepare the host to emulate the gate
-cd /opt # or somewhere you want to put stuff
-git clone <a class="reference external" href="https://github.com/JohnVillalovos/devstack-gate-test.git">https://github.com/JohnVillalovos/devstack-gate-test.git</a>
-cd devstack-gate-test
-./vm-setup.sh
-su - jenkins</p>
-<p>Step 2.5: [optional]
-# Snapshot the instance here for convenience</p>
-<p>Step 3:
-# Execute the reproduction event
-# [in a browser]
-# - click the link of the correct gate job from the review you want to reproduce
-# - find the <tt class="docutils literal">reproduce.sh</tt> script in the <tt class="docutils literal">logs</tt> directory
-# - <tt class="docutils literal">copy link location</tt> for this script</p>
-<p>cd ..
-wget [paste-url]
-chmod u+x reproduce.sh
-./reproduce.sh</p>
+<p>This is just a really quick post to capture something learned.</p>
+<p>Imagine your CI job fails. Imagine you can't tell why easily because
+there are so many moving parts in the CI. Imagine you are asked to
+fix the broken build.</p>
+<img alt="/images/tbss.gif" src="images/tbss.gif"><p>This post is about how I got past that.</p>
+<p>Step 1: Set the stage</p>
+<ul class="simple">
+<li>Provision a new VM which could run a gate job.</li>
+<li>Prepare it with any personal customizations and tailor to your tool preferences appropriate to a disposable working environment.</li>
+</ul>
+<p>Step 2: Prepare the host to emulate the gate</p>
+<pre class="code text"><a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-1"></a>cd /opt # or somewhere you want to put stuff
+<a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-2"></a>git clone https://github.com/JohnVillalovos/devstack-gate-test.git
+<a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-3"></a>cd devstack-gate-test
+<a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-4"></a>./vm-setup.sh
+<a name="rest_code_40b00252788a4833ac09e1a4eb6bda52-5"></a>su - jenkins
+</pre>
+<p>Step 2.5: [optional]</p>
+<ul class="simple">
+<li>Snapshot the instance here for convenience</li>
+</ul>
+<p>Step 3: Execute the reproduction event</p>
+<p>In a browser</p>
+<ul class="simple">
+<li>click the link of the correct gate job from the review you want to reproduce</li>
+<li>find the <tt class="docutils literal">reproduce.sh</tt> script in the <tt class="docutils literal">logs</tt> directory</li>
+<li>
+<tt class="docutils literal">copy link location</tt> for this script</li>
+</ul>
+<pre class="code text"><a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-1"></a>cd ..
+<a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-2"></a>wget [paste-url]
+<a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-3"></a>chmod u+x reproduce.sh
+<a name="rest_code_0db578d00acb40e991ad0bb63208d8b7-4"></a>./reproduce.sh
+</pre>
+<p>Now just kick back and watch the cargage!</p>
+<img alt="/images/trainwreck.gif" src="images/trainwreck.gif">
 </div>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/learning-as-performance-1/" class="u-url">Learning As Performance, part 1</a></h1>
