@@ -1,6 +1,6 @@
 steps:
   - name: vorakl/alpine-pelican 
-    args: ["pelican-themes", "-i", "/workspace/themes/nest", "&", "pelican", "/workspace/content", "-o", "/workspace/output", "-s", "publishconf.py"]
+    entrypoint: publish.sh
 
   - name: gcr.io/cloud-builders/gsutil
     args: ["-m", "rsync", "-r", "-c", "-d", "./output/", "gs://www.stevelle.me"]
