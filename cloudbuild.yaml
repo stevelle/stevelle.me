@@ -1,6 +1,6 @@
 steps:
   - name: vorakl/alpine-pelican 
-    entrypoint: publish.sh
+    entrypoint: "/workspace/publish.sh"
 
   - name: gcr.io/cloud-builders/gsutil
     args: ["-m", "rsync", "-r", "-c", "-d", "./output/", "gs://www.stevelle.me"]
