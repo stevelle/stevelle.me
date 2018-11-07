@@ -1,5 +1,5 @@
 steps:
-  - name: vorak/alpine-pelican
+  - name: vorakl/alpine-pelican 
     args: ["pelican-themes", "-i", "/workspace/themes/nest", "&", "pelican", "/workspace/content", "-o", "/workspace/output", "-s", "publishconf.py"]
 
   - name: gcr.io/cloud-builders/gsutil
