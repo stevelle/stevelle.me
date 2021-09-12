@@ -12,9 +12,6 @@ Imagine your CI job fails. Imagine you can't tell why easily because
 there are so many moving parts in the CI. Imagine you are asked to
 fix the broken build.  
 
-.. image:: /images/tbss.gif
-   :alt: crying child
-
 This post is about how I got past that.
 
 Step 1: Set the stage
@@ -60,7 +57,3 @@ In the VM
 
 
 Now just kick back and watch the carnage!
-
-.. image:: /images/trainwreck.gif
-   :alt: a train wreck
-

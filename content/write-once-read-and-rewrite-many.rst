@@ -7,14 +7,6 @@ Write once, Read and rewrite many
 :summary: The story of a refactor
 
 
-.. epigraph::
-
-    “Indeed, the ratio of time spent reading versus writing is well over 10 to
-    1. We are constantly reading old code as part of the effort to write new
-    code. ...[Therefore,] making it easy to read makes it easier to write.”
-
-    --  Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship
-
 Most of my time in software development is spent reading and thinking about code
 [1]_ rather than writing it. This is not a groundbreaking revelation [2]_ but it
 is particularly true for me.
